@@ -1,0 +1,62 @@
+#:import Window kivy.core.window
+
+<MyButton>:
+    background_color: 0,0,1,0.3
+    font_size: 0.3*self.height
+
+<Gamescr>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 30
+        Label:
+            id: Q
+            color: 1,1,0,1
+
+            size_hint: (1, 0.3)
+            text: "THE MAFF PROB"
+            font_size: 0.5*self.height
+
+        GridLayout:
+            id: grid
+            cols: 2
+            spacing: 30
+            size_hint: (0.8, 1)
+            pos_hint: {"x":0.1, "top":0.9}
+            pos_y: 30
+
+
+        Label:
+            #EMPTY SPACE
+            size_hint: (1, 0.01)
+            text: ""
+                    
+ 
+<Menu>:
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 30
+        MyButton:
+            text: "IMPROVE"
+            font_size: 0.5*self.height
+            on_press: root.play_program()
+        MyButton:
+            text: "TEST"
+            font_size: 0.5*self.height
+            on_press: root.play()
+
+
+        # MyButton:
+        #     text: "MONITOR"
+        #     font_size: 0.5*self.height
+        #     on_press: print("IMPLEMENT ME")
+
+
+<PostGame>:
+    BoxLayout:
+        orientation: "vertical"
+        id: box
+        spacing: 30
+        size_hint: (0.9, 0.9)
+        pos_hint: {"x":0.05, "y":0.05}
+
+           
